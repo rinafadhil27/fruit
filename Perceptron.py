@@ -11,9 +11,6 @@ def load_model_and_encoder():
     with open('fruit_encoder.sav', 'rb') as encoder_file:
         label_encoder = pickle.load(encoder_file)
     return model, scaler, label_encoder
-# Memuat model, scaler, dan label encoder
-model, scaler, label_encoder = load_model_and_encoder()
-
 # Judul Aplikasi
 st.title("Aplikasi Prediksi Klasifikasi Buah")
 st.title("Masukkan Fitur")
