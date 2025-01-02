@@ -4,16 +4,13 @@ import numpy as np
 
 # Memuat model, scaler, dan label encoder yang sudah disimpan
 def load_model_and_encoder():
-    with open('D:/Machine Learning/Dataset Supervised/fruit_perceptron.sav', 'rb') as model_file:
+    with open('fruit_perceptron.sav', 'rb') as model_file:
         model = pickle.load(model_file)
-    with open('D:/Machine Learning/Dataset Supervised/scaler_perceptron.sav', 'rb') as scaler_file:
+    with open('scaler_perceptron.sav', 'rb') as scaler_file:
         scaler = pickle.load(scaler_file)
-    with open('D:/Machine Learning/Dataset Supervised/fruit_encoder.sav', 'rb') as encoder_file:
+    with open('fruit_encoder.sav', 'rb') as encoder_file:
         label_encoder = pickle.load(encoder_file)
     return model, scaler, label_encoder
-
-# Memuat model, scaler, dan label encoder
-model, scaler, label_encoder = load_model_and_encoder()
 
 # Judul Aplikasi
 st.title("Aplikasi Prediksi Klasifikasi Buah")
